@@ -1,5 +1,8 @@
 class Solution {
     public String solution(String my_string) {
+        
+        return new StringBuilder(my_string).reverse().toString();
+        /*
         String answer = "";
         
         for (int i = my_string.length()-1; i >= 0; i--) {
@@ -7,5 +10,6 @@ class Solution {
         }
         
         return answer;
+        */
     }
 }
