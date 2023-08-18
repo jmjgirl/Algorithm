@@ -3,9 +3,9 @@ import java.util.stream.*;
 class Solution {
     public int[] solution(int n) {
         
-        return IntStream.rangeClosed(1, n).filter(i -> n % i == 0).toArray();
+        //return IntStream.rangeClosed(1, n).filter(i -> n % i == 0).toArray();
         
-        /*
+
         int count = 0;
         
         for (int i = 1; i <= n; i++) {
@@ -25,6 +25,6 @@ class Solution {
         }
         
         return answer;
-        */
+    
     }
 }
