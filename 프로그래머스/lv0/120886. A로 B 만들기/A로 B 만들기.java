@@ -1,6 +1,18 @@
 class Solution {
     public int solution(String before, String after) {
         int answer = 0;
+        
+        for (int i = 0; i < before.length(); i++ ) {
+            after = after.replaceFirst(String.valueOf(before.charAt(i)), "");
+        }
+        
+        if (after.length() >= 1) {
+            answer = 0;
+        } else {
+            answer = 1;
+        }
+        
+        /*
         StringBuffer afterBuffer = new StringBuffer(after);
         
         for (int i = 0; i < before.length(); i++) {
@@ -14,6 +26,7 @@ class Solution {
         } else {
             answer = 1;
         }
+        */
     
         return answer;
     }
