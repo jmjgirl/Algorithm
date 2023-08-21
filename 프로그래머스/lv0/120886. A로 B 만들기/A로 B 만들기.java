@@ -1,17 +1,16 @@
+import java.util.*;
+
 class Solution {
     public int solution(String before, String after) {
         int answer = 0;
         
-        for (int i = 0; i < before.length(); i++ ) {
-            after = after.replaceFirst(String.valueOf(before.charAt(i)), "");
-        }
+        char [] b = before.toCharArray();
+        char [] a = after.toCharArray();
         
-        if (after.length() >= 1) {
-            answer = 0;
-        } else {
-            answer = 1;
-        }
-        
+        Arrays.sort(a);
+        Arrays.sort(b);
+
+        return new String(a).equals(new String(b)) ? 1 :0;
         /*
         StringBuffer afterBuffer = new StringBuffer(after);
         
@@ -26,8 +25,8 @@ class Solution {
         } else {
             answer = 1;
         }
-        */
     
         return answer;
+        */
     }
 }
