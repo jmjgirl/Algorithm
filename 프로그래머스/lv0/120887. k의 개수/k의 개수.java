@@ -2,13 +2,14 @@ class Solution {
     public int solution(int i, int j, int k) {
         int answer = 0;
         
-        for (int start = i; start <= j; start++) {
-            String kstr = String.valueOf(start);
-            
-            for (int a = 0; a < kstr.length(); a++) {
-                if (String.valueOf(k).equals(kstr.substring(a,a+1))) {
-                    answer +=1;
+        for(int start = i; start<=j; start++) {
+
+            int x = start;
+            while (x != 0) {
+                if (x % 10 == k) {
+                    answer++;
                 }
+                x /= 10;
             }
         }
         return answer;
