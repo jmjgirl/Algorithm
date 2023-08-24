@@ -1,6 +1,5 @@
 class Solution {
     public long solution(String numbers) {
-        long answer = 0;
         
         String [] number = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
         
@@ -10,7 +9,7 @@ class Solution {
             }
         }
         
-        answer = Long.parseLong(numbers);
+        long answer = Long.parseLong(numbers);
         
         return answer;
     }
