@@ -11,7 +11,6 @@ class Solution {
         for(int i=0; i<arr.length; i++) {
             if(arr[i].contains("x")) {
                 x += arr[i].equals("x") ? 1 : Integer.parseInt(arr[i].replace("x",""));
-                //System.out.print(Integer.parseInt(arr[i].replace("x","")));
             } else if(!arr[i].equals("+")) {
                 n += Integer.parseInt(arr[i]);
             }
