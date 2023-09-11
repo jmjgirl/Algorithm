@@ -13,11 +13,14 @@ class Solution {
                 order[i] = numlist[i] - n; 
         }
         
-        Arrays.sort(order); // 오름차순 정렬
+        Arrays.sort(order);
         
         for(int i = 0; i < numlist.length; i++) {
-            if(order[i] % 1 != 0) answer[i] = n - (int)order[i];
-            else answer[i] = (int)order[i] + n;
+            if(order[i] % 1 != 0) {
+                answer[i] = n - (int)order[i];
+            } else {
+                answer[i] = (int)order[i] + n;
+            }
         }
         
         return answer;
