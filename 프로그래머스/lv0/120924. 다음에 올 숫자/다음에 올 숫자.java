@@ -5,7 +5,7 @@ class Solution {
         // 등차수열일때
         if((common[1] - common[0]) == (common[2] - common[1])) {
             answer = common[common.length-1] + (common[1] - common[0]);
-            // 등비수열일때
+        // 등비수열일때
         } else {
             answer = common[common.length-1] * (common[1] / common[0]);
         }
