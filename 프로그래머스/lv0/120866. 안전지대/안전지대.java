@@ -3,8 +3,8 @@ class Solution {
         int [][] boomBoard = new int[board.length][board.length];
         
         // 지뢰있는 곳 찾기
-        for (int i=0; i<boomBoard.length; i++) {
-            for (int j=0; j<boomBoard.length; j++) {
+        for (int i=0; i<board.length; i++) {
+            for (int j=0; j<board.length; j++) {
                 if(board[i][j] == 1) checkBoom(i,j,boomBoard);
             }
         }
