@@ -6,9 +6,7 @@ class Solution {
         for(int j=0; j<babbling.length; j++) {
             for (int i=0; i<words.length; i++) {
                 if(babbling[j].contains(words[i])) {
-                    System.out.println(babbling[j]);
                     babbling[j] = babbling[j].replace(words[i]," ");
-                    System.out.println(babbling[j]);
                 }
             }
             
