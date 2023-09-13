@@ -4,6 +4,7 @@ class Solution {
     public int solution(int[][] dots) {
         int answer = 0;
         
+        // 3가지만 생각하면 됨...!
         int x1 = dots[0][0];
         int y1 = dots[0][1];
         int x2 = dots[1][0];
