@@ -3,8 +3,7 @@ class Solution {
         int answer = 0;
         
         if(s.contains("-")){
-            s = s.replace("-","");
-            answer = -1 * Integer.parseInt(s);
+            answer = -1 * Integer.parseInt(s.substring(1));
         }else{
             answer = Integer.parseInt(s);
         }
