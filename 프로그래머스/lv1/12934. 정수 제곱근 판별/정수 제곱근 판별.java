@@ -6,7 +6,7 @@ class Solution {
         
         // 정수이면
         if (Math.sqrt(n) % 1 == 0.0) {
-            answer = (long)(Math.sqrt(n) + 1) * (long) (Math.sqrt(n) + 1);
+            answer = (long) Math.pow(Math.sqrt(n) + 1, 2);
         } else {
             answer = -1;
         }
