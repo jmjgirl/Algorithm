@@ -4,8 +4,7 @@ class Solution {
         
         String[] arr = new String[t.length()-p.length()+1];
         for(int i=0; i<arr.length; i++) {
-            String s = t;
-            arr[i] = s.substring(i,i+p.length());
+            arr[i] = t.substring(i,i+p.length());
             
             if(Long.parseLong(arr[i]) <= Long.parseLong(p)) answer+=1;
         }
