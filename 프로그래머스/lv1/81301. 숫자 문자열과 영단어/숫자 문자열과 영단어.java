@@ -7,7 +7,6 @@ class Solution {
             s = s.replaceAll(eng[i], i+"");
         }
         
-        //answer = Integer.parseInt(s);
         return Integer.parseInt(s);
     }
 }
