@@ -5,13 +5,14 @@ class Solution {
         for(int i=0; i<s.length(); i++) {
               char ch = s.charAt(i);
               
-              if(Character.isLowerCase(ch)) { //소문자
-                  ch = (char) ((ch - 'a' + n) % 26 + 'a');
-              } else if(Character.isUpperCase(ch)) { //대문자
-                  ch = (char) ((ch - 'A' + n) % 26 + 'A');
+              if(Character.isLowerCase(ch)) { 
+                  answer += (char) ((ch - 'a' + n) % 26 + 'a');
+              } else if(Character.isUpperCase(ch)) { 
+                  answer += (char) ((ch - 'A' + n) % 26 + 'A');
+              } else {
+                  answer += ch;
               }
-              
-              answer += ch;
+        
           }
         
         return answer;
