@@ -16,7 +16,6 @@ class Solution {
  
             if(repeat > 0) {
                 for(int j=0; j<repeat; j++) {
-                    System.out.println(i);
                     arr[left++] = i;
                     arr[right--] = i;
                 }
