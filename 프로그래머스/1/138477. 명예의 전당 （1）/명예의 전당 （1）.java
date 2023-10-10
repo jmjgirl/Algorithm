@@ -3,7 +3,7 @@ import java.util.*;
 class Solution {
     public int[] solution(int k, int[] score) {
         int[] answer = new int[score.length];
-        
+        // 우선순위 큐
         PriorityQueue<Integer> priorityQueue = new PriorityQueue<>();
 
         int temp = 0;
