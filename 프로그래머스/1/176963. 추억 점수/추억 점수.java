@@ -9,9 +9,10 @@ class Solution {
         for(String[] arr : photo) {
             for(int i=0; i<arr.length; i++) {
                 if(Arrays.asList(name).contains(arr[i])) // 만약 포함하면
-                    answer[index] += yearning[Arrays.asList(name).indexOf(arr[i])];
+                    count += yearning[Arrays.asList(name).indexOf(arr[i])];
             }
-            index++;
+            answer[index++] = count;
+            count = 0;
         }
         return answer;
     }
