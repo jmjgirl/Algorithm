@@ -5,8 +5,7 @@ class Solution {
             for(int j=i+1; j<nums.length-1; j++) {
                 for(int k=j+1; k<nums.length; k++) {
                     int sum = nums[i] + nums[j] + nums[k];
-                    //System.out.println(sum);
-                    if(isDigit(sum) == true) answer++;
+                    if(isPrime(sum) == true) answer++;
                 }
             }
         }
@@ -14,11 +13,10 @@ class Solution {
         return answer;
     }
     
-    boolean isDigit(int sum) {
+    boolean isPrime(int sum) {
         for(int i=2; i<=Math.sqrt(sum); i++) {
             if(sum % i==0) return false;
         }
-        //System.out.println(sum);
         return true;
     }
 }
