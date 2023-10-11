@@ -8,13 +8,7 @@ class Solution {
         
         for(int i=0; i<answers.length; i++) {
             if(answers[i] == num1[i%5]) score[0]++;
-        }
-        
-        for(int i=0; i<answers.length; i++) {
             if(answers[i] == num2[i%8]) score[1]++;
-        }
-        
-        for(int i=0; i<answers.length; i++) {
             if(answers[i] == num3[i%10]) score[2]++;
         }
         
@@ -32,10 +26,7 @@ class Solution {
         int index = 0;
         for(int i=0; i<3; i++) {
             if(score[i] == max) answer[index++] = i+1;
-            
         }
-        
-        
         
         return answer;
     }
