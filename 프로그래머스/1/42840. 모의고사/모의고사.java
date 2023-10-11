@@ -1,3 +1,4 @@
+import java.math.*;
 class Solution {
     public int[] solution(int[] answers) {
         int[] num1 = {1,2,3,4,5};
@@ -12,10 +13,13 @@ class Solution {
             if(answers[i] == num3[i%10]) score[2]++;
         }
         
+        int max = Math.max(score[0], Math.max(score[1], score[2]));
+        /*
         int max = score[0];
         for(int i=1; i<3; i++) {
             if(max < score[i]) max = score[i];
         }
+        */
         
         int count = 0;
         for(int i=0; i<3; i++) {
