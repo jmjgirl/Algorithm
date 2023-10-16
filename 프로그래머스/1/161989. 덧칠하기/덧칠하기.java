@@ -21,12 +21,6 @@ class Solution {
             }
         }
         
-        /*
-        int distance = section[section.length-1] - section[0] + 1;
-        
-        answer = distance > m ? (int) Math.ceil((double) distance / m) : 1;
-        return answer;
-        */
         return answer;
     }
 }
