@@ -8,15 +8,9 @@ class Solution {
         int weapon = 0;
         int num = 0;
         for(int i=1; i<=number; i++) {
-            //num = i % 2 == 1 ? i/2+1 : i/2;
             for(int j=1; j<=Math.sqrt(i); j++) {
-                //System.out.println(Math.ceil(i/2));
                 if(i % j == 0) weapon++;
-                //System.out.println(i + ":" + weapon);
-            }
-            //System.out.println(weapon);
-   
-            
+            }   
     
             if(i % Math.sqrt(i) == 0) {
                 weapon = weapon*2 - 1;
@@ -25,7 +19,6 @@ class Solution {
             }
             
             answer += weapon <= limit ? weapon : power;
-            
             weapon = 0;
         }
         
