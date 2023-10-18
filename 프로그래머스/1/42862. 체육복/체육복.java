@@ -5,8 +5,7 @@ class Solution {
         int answer = 0;
         int[] clothes = new int[n];
         Arrays.fill(clothes,1);
-        
-        // System.out.println(Arrays.toString(clothes));
+ 
         // 잃어버린 학생
         for(int i=0; i<lost.length; i++) {
             clothes[lost[i]-1] = 0;
@@ -31,6 +30,7 @@ class Solution {
             }
         }
         
+        // 체육 수업 들을 수 있는 학생들
         for(int i=0; i<clothes.length; i++) {
             if(clothes[i] >= 1) answer++;
         }
