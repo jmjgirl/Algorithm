@@ -1,5 +1,16 @@
 class Solution {
     public int solution(int n) {
+        
+      int a = Integer.bitCount(n);
+      int answer = n+1;
+        
+      while(true) {
+          
+        if(Integer.bitCount(answer)==a)
+        break;
+        answer++;
+      }
+        /*
         int answer = n+1;
         int count1 = 0;
         
@@ -22,6 +33,7 @@ class Solution {
                 answer++;
             }
         }
+        */
         
         return answer;
     }
