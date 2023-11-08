@@ -11,9 +11,4 @@ class Solution {
         
         return arr[n];
     }
-
-    public int pibonachi(int n) {
-        if(n <= 2) return 1;
-        else return pibonachi(n-1)%1234567 + pibonachi(n-2)%1234567;
-    }
 }
