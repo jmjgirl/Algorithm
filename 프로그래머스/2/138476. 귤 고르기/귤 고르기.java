@@ -22,23 +22,6 @@ class Solution {
             }
         }
             
-        /*
-        int[] box = new int[10000000]; // 개수 셀 배열
-        
-        for(int i=0; i<tangerine.length; i++) {
-            box[tangerine[i]]++;
-        }
-        
-        Arrays.sort(box);
-        for(int i=box.length-1; i>=0; i--) {
-            if(k>0) {
-                k-=box[i];
-                answer++;
-            } else {
-                break;
-            }
-        }
-        */
         return answer;
     }
 }
