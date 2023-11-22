@@ -5,8 +5,6 @@ class Solution {
         int answer = 0;
         String str = Integer.toString(n,k);
         String[] arr = str.split("0+");
-        System.out.println(Arrays.toString(arr));
-        
         
         for(int i=0; i<arr.length; i++) {
             int count = 0;
