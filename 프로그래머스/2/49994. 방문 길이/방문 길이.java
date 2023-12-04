@@ -6,7 +6,6 @@ class Solution {
         char[] dir = dirs.toCharArray();
         int x = 0;
         int y = 0;
-
         for(int i=0; i<dir.length; i++) {
             int pX = x;
             int pY = y;
