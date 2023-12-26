@@ -1,7 +1,7 @@
 class Solution {
     static int[] answer;
     public int[] solution(int[][] arr) {
-        answer = new int[2];
+        answer = new int[2];    
         quad(arr,0,0,arr.length);
         return answer;
     }
@@ -11,11 +11,14 @@ class Solution {
             if(arr[x][y] == 0) answer[0]++;
             else answer[1]++;
             return ;
-        } 
+        }
+        
+        // 재귀
         quad(arr,x,y,size/2);
         quad(arr,x+size/2,y,size/2);
         quad(arr,x,y+size/2,size/2);
         quad(arr,x+size/2,y+size/2,size/2);
+        
     }
     
     public boolean zip(int[][] arr, int x, int y, int size, int val) {
