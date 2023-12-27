@@ -6,3 +6,5 @@ OR OPTIONS LIKE '%열선시트%'
 OR OPTIONS LIKE '%가죽시트%'
 GROUP BY CAR_TYPE
 ORDER BY CAR_TYPE;
+
+-- OPTIONS REGEXP '통풍시트|열선시트|가죽시트' 정규식 사용 방법
