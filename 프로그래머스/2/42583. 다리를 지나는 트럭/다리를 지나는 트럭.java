@@ -1,26 +1,29 @@
 import java.util.*;
 class Solution {
     public int solution(int bridge_length, int weight, int[] truck_weights) {
-        Queue<Integer> bridge = new LinkedList<>();
         int answer = 0;
-        for(int i=0; i<bridge_length; i++){
+        Queue<Integer> bridge = new LinkedList<>();
+        
+        for(int i=0; i<bridge_length; i++) {
             bridge.add(0);
         }
+        
         int truckIdx = 0;
-        int trucksWeight = 0;
-        while(truckIdx < truck_weights.length){
+        int truckWeight = 0;
+        while(truckIdx < truck_weights.length) {
             answer++;
-            trucksWeight -= bridge.poll();
-            if(trucksWeight + truck_weights[truckIdx] <= weight){
+            truckWeight -= bridge.poll();
+            if(truckWeight + truck_weights[truckIdx] <= weight) { // 다리에 트럭을 올릴 수 있는 경우
                 bridge.add(truck_weights[truckIdx]);
-                trucksWeight += truck_weights[truckIdx];
+                truckWeight += truck_weights[truckIdx];
                 truckIdx++;
-            }
-            else {
+            } else { // 다리에 트럭을 못올릴 경우
                 bridge.add(0);
             }
         }
-
-        return bridge_length + answer;
+        
+        answer += bridge_length;
+        
+        return answer;
     }
 }
