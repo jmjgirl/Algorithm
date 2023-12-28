@@ -7,14 +7,12 @@ class Solution {
         visited = new boolean[numbers.length()];
         dfs(0,0, numbers);
         int answer = 0;
-        //System.out.println(set.toString());
         
         for(int s : set) {
             int count = 0;
             if(s < 2) continue;
             for(int i=2; i<=s/2; i++) {
                 if(s % i == 0) {
-                    //System.out.println(s);
                     count++;
                     break;
                 }
