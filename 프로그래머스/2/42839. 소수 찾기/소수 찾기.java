@@ -1,4 +1,5 @@
 import java.util.*;
+import java.math.*;
 class Solution {
     public HashSet<Integer> set;
     public boolean[] visited;
@@ -11,7 +12,7 @@ class Solution {
         for(int s : set) {
             int count = 0;
             if(s < 2) continue;
-            for(int i=2; i<=s/2; i++) {
+            for(int i=2; i<=Math.sqrt(s); i++) {
                 if(s % i == 0) {
                     count++;
                     break;
