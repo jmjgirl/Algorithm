@@ -18,8 +18,7 @@ class Solution {
                     index = j+1;
                 }
             }
-            // 가장 큰 문자를 String에 넣어주기
-            sb.append(Character.toString(max));
+            sb.append(max);
         }
         
         answer = new String(sb);
