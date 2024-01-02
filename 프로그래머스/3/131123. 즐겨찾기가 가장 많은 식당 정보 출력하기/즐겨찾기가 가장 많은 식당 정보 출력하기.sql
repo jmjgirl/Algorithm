@@ -1,4 +1,4 @@
--- 코드를 입력하세요
+-- 식품분류별 가장 비싼 식품의 정보 조회하기랑 비슷한 문제
 SELECT FOOD_TYPE, REST_ID, REST_NAME, FAVORITES
 FROM REST_INFO
 WHERE (FOOD_TYPE, FAVORITES) IN
