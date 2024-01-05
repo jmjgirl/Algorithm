@@ -4,14 +4,12 @@ class Solution {
         String answer = "(None)";
         m = replaceString(m);
         
-        String[] startTime = new String[2];
-        String[] endTime = new String[2];
         int max = 0; // 재생 시간이 가장 긴
         
         for(int i=0; i<musicinfos.length; i++) {
             String[] service = musicinfos[i].split(",");
-            startTime = service[0].split(":");
-            endTime = service[1].split(":");
+            String[] startTime = service[0].split(":");
+            String[] endTime = service[1].split(":");
             int startMinutes = Integer.parseInt(startTime[0]) * 60 + Integer.parseInt(startTime[1]);
             int endMinutes = Integer.parseInt(endTime[0]) * 60 + Integer.parseInt(endTime[1]);
             int minutes = endMinutes - startMinutes;
