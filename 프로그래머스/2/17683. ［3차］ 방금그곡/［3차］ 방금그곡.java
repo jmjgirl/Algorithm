@@ -2,28 +2,13 @@ import java.util.*;
 class Solution {
     public String solution(String m, String[] musicinfos) {
         String answer = "(None)";
-        //ArrayList<ArrayList<String>> arrMusicinfos = new ArrayList<>();
         m = replaceString(m);
-        
-        // musicinfos를 split
-        /*
-        for(int i=0; i<musicinfos.length; i++) {
-            String[] split = musicinfos[i].split(",");
-            ArrayList<String> arr = new ArrayList<>();
-            for(int j=0; j<split.length; j++) {
-                arr.add(split[j]);
-            }
-            arrMusicinfos.add(arr);
-        }
-        */
-        
         
         String[] startTime = new String[2];
         String[] endTime = new String[2];
         int max = 0; // 재생 시간이 가장 긴
         
         for(int i=0; i<musicinfos.length; i++) {
-            //ArrayList<String> arr = arrMusicinfos.get(i);
             String[] service = musicinfos[i].split(",");
             startTime = service[0].split(":");
             endTime = service[1].split(":");
@@ -40,8 +25,7 @@ class Solution {
                     max = minutes;
                     answer = title;
                 }
-            } 
-            
+            }  
         }
 
         return answer;
