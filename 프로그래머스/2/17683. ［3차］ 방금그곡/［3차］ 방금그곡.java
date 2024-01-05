@@ -1,12 +1,12 @@
 import java.util.*;
 class Solution {
     public String solution(String m, String[] musicinfos) {
-        String answer = "";
-        ArrayList<ArrayList<String>> arrMusicinfos = new ArrayList<>();
+        String answer = "(None)";
+        //ArrayList<ArrayList<String>> arrMusicinfos = new ArrayList<>();
         m = replaceString(m);
         
         // musicinfos를 split
-        
+        /*
         for(int i=0; i<musicinfos.length; i++) {
             String[] split = musicinfos[i].split(",");
             ArrayList<String> arr = new ArrayList<>();
@@ -15,51 +15,35 @@ class Solution {
             }
             arrMusicinfos.add(arr);
         }
+        */
         
         
         String[] startTime = new String[2];
         String[] endTime = new String[2];
-        int max = 0;
-        for(int i=0; i<arrMusicinfos.size(); i++) {
-            ArrayList<String> arr = arrMusicinfos.get(i);
-            startTime = arr.get(0).split(":");
-            endTime = arr.get(1).split(":");
+        int max = 0; // 재생 시간이 가장 긴
+        
+        for(int i=0; i<musicinfos.length; i++) {
+            //ArrayList<String> arr = arrMusicinfos.get(i);
+            String[] service = musicinfos[i].split(",");
+            startTime = service[0].split(":");
+            endTime = service[1].split(":");
             int startMinutes = Integer.parseInt(startTime[0]) * 60 + Integer.parseInt(startTime[1]);
             int endMinutes = Integer.parseInt(endTime[0]) * 60 + Integer.parseInt(endTime[1]);
             int minutes = endMinutes - startMinutes;
-            String content = replaceString(arr.get(3));
+            String title = service[2];
+            String content = replaceString(service[3]);
             
-            //if(minutes > content.length()) {
-                int contentLength = content.length();
-                content = content.repeat(minutes/contentLength)
-                    + content.substring(0, minutes % contentLength);
-                if(content.contains(m)) {
-                    if(minutes > max) {
-                       max = minutes;
-                       answer = arr.get(2);
-                    }
-                } 
-            //}
-            
-            // 노래 재생 기간이 m의 길이 보다 짧다면
-            /*
-            if(m.length() > minutes) break;
-            else {
-                int contentLength = content.length();
-                content = content.repeat(minutes/contentLength)
-                    + content.substring(0, minutes % contentLength);
-                if(content.contains(m)) {
-                    if(minutes > max) {
-                       max = minutes;
-                       answer = arr.get(2);
-                    }
+            int contentLength = content.length();
+            content = content.repeat(minutes/contentLength) + content.substring(0, minutes % contentLength);
+            if(content.contains(m)) {
+                if(minutes > max) {
+                    max = minutes;
+                    answer = title;
                 }
-                // System.out.println(content);
-            }*/
+            } 
             
         }
 
-        if(answer.length() == 0) return "(None)";
         return answer;
     }
     
