@@ -10,7 +10,7 @@ class Solution {
             int checkOut = timeToMinute(book_time[i][1]);
             if(rooms.size()==0) rooms.add(checkOut + 10);
             else {
-                // 입실 부가능하면
+                // 입실 불가능하면
                 rooms.add(checkOut+10);
                 
                 for(int j=0; j<rooms.size(); j++) {
