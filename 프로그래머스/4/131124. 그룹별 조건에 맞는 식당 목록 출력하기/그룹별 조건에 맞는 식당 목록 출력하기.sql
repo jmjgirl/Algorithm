@@ -1,10 +1,10 @@
 -- 코드를 입력하세요
 SELECT MEMBER_NAME, REVIEW_TEXT, DATE_FORMAT(REVIEW_DATE,'%Y-%m-%d') AS REVIEW_DATE
 FROM MEMBER_PROFILE P INNER JOIN REST_REVIEW R ON P.MEMBER_ID = R.MEMBER_ID
-WHERE P.MEMBER_ID =         (SELECT MEMBER_ID
-                            FROM REST_REVIEW
-                            GROUP BY MEMBER_ID
-                            HAVING SUM(REVIEW_SCORE)
-                            ORDER BY SUM(REVIEW_SCORE) DESC
-                            LIMIT 1)
+WHERE P.MEMBER_ID = (SELECT MEMBER_ID
+                     FROM REST_REVIEW
+                     GROUP BY MEMBER_ID
+                     HAVING SUM(REVIEW_SCORE)
+                     ORDER BY SUM(REVIEW_SCORE) DESC
+                     LIMIT 1)
 ORDER BY REVIEW_DATE, REVIEW_TEXT;
