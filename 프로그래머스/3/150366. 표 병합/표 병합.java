@@ -124,8 +124,11 @@ class Solution {
         String temp = map[r][c];
         
         int val = visited[r][c];
+        
+        // 이부분이 문제였다...! 추가해주니까 성공
         if (val == 0)
             return;
+        
         for(int i=1; i<=50; i++) {
             for(int j=1; j<=50; j++) {
                 if(visited[i][j] == val) {
