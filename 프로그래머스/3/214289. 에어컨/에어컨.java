@@ -13,7 +13,6 @@
 - 전원 OFF -> 전력 소비 X
 - 전원 끄고 키는데 필요한 시간, 전력 = 0
 
-* 희망온도가 중요하지 않음!
 */
 import java.math.*;
 class Solution {
