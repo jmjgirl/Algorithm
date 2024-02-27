@@ -12,7 +12,7 @@ class Solution {
             alp_target = Math.max(alp_target, problem[0]);
             cop_target = Math.max(cop_target, problem[1]);
         }
-        
+    
         // 초기 알고력과 코딩력이 둘 다 목표치보다 높은 경우 -> 최단시간 0
         if(alp >= alp_target && cop >= cop_target) return 0;
         
