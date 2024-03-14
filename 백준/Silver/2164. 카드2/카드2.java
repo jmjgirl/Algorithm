@@ -15,14 +15,9 @@ public class Main {
         }
 
         // 1개 남을때까지
-        int count = 0;
         while(queue.size()!=1) {
-            if(count % 2 == 0) {
-                queue.poll();
-            }else {
-                queue.add(queue.poll());
-            }
-            count++;
+            queue.poll();
+            queue.add(queue.poll());
         }
 
         System.out.println(queue.poll());
