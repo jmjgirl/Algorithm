@@ -35,7 +35,7 @@ public class Main {
     }
 
     public static void dfs(int v, int dept) {
-        if(dept==5 || count == 1) {
+        if(dept==5 || count == 1) { // 여기 count == 1 안해줘서 시간초과 났어...ㅎ 하...
             count = 1;
             return;
         }
