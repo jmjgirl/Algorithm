@@ -8,6 +8,7 @@ public class Main {
         int[] arr = new int[10000001]; // 1이면 소수 아님
         arr[1] = 1;
         for(int i=2; i<=Math.sqrt(arr.length); i++) {
+            if(arr[i] == 1) continue;
             for(int j=i+i; j<arr.length; j+=i) {
                 arr[j] = 1;
             }
