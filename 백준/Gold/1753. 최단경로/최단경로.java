@@ -52,15 +52,16 @@ public class Main {
         while(!queue.isEmpty()) {
             Node current = queue.poll();
             int c_v = current.v;
-            
+
             if(visited[c_v]) continue; // 이미 방문하면 큐에 넣지 않음
             visited[c_v] = true;
             for(Node n : graph[c_v]) {
                 int next = n.v;
                 int value = n.w;
-                minArr[next] = Math.min(minArr[c_v] + value, minArr[next]);
-                //queue.add(new Node(next,value));
-                queue.add(new Node(next,minArr[next]));
+                if(minArr[next] > minArr[c_v] + value) {
+                    minArr[next] = minArr[c_v] + value;
+                    queue.add(new Node(next,minArr[next]));
+                }
             }
         }
     }
